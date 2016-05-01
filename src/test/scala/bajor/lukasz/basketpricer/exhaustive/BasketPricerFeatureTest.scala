@@ -13,4 +13,11 @@ class BasketPricerFeatureTest extends FreeSpec {
     }
   }
 
+  "BasketPricer with offers" - {
+    "should support buy 1 get 1 free offer" in {
+      val pricer = new BasketPricer(new BuyOneGetOneFree(Apple))
+      assert(pricer.price(new Basket(Apple, Apple)) === Apple.price)
+    }
+  }
+
 }
