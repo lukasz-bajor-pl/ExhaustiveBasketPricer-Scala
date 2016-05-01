@@ -8,6 +8,6 @@ class BasketPricer() {
     if (basket.items.isEmpty)
       BigDecimal(0)
     else
-      basket.items.head.price
+      basket.items.head.price * basket.items.length
   }
 }
