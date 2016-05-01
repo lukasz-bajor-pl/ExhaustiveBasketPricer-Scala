@@ -12,5 +12,9 @@ class BasketPricerShould extends FreeSpec {
     "price empty basket as 0" in {
       assert(basketPricer.price(new Basket) === BigDecimal(0))
     }
+
+    "price basket with single item with item unit price" in {
+      assert(basketPricer.price(new Basket(Apple)) === Apple.price)
+    }
   }
 }

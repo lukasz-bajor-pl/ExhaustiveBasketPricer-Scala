@@ -5,5 +5,4 @@ package bajor.lukasz.basketpricer.exhaustive
   */
 class BasketPricer() {
   def price(basket: Basket): BigDecimal = BigDecimal(0)
-
 }
