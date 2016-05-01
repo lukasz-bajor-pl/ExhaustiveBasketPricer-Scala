@@ -16,5 +16,9 @@ class BasketPricerShould extends FreeSpec {
     "price basket with single item with item unit price" in {
       assert(basketPricer.price(new Basket(Apple)) === Apple.price)
     }
+
+    "price basket with 2 same items" in {
+      assert(basketPricer.price(new Basket(Apple, Apple)) === Apple.price*2)
+    }
   }
 }
